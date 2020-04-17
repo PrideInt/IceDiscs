@@ -57,7 +57,7 @@ public class IceDiscs extends IceAbility implements AddonAbility {
 		sourceBlock = player.getTargetBlock((Set<Material>) null, (int) selectRange);
 		
 		if (sourceBlock != null && !GeneralMethods.isRegionProtectedFromBuild(this, sourceBlock.getLocation()) &&
-				sourceBlock.getType() == Material.ICE) {
+				sourceBlock.getType() == Material.ICE || sourceBlock.getType() == Material.PACKED_ICE || sourceBlock.getType() == Material.BLUE_ICE) {
 			
 			origin = sourceBlock.getLocation().add(0, 1, 0);
 			
@@ -156,7 +156,7 @@ public class IceDiscs extends IceAbility implements AddonAbility {
 	@Override
 	public String getAuthor() {
 		return Element.WATER.getColor() + "" + ChatColor.UNDERLINE + 
-				"Prride";
+				"Prride, BlueHiddenWolf & Shookified";
 	}
 
 	@Override
